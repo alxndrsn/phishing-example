@@ -44,5 +44,10 @@
     </div>
     <script src="/login/lib-bowser.js"></script>
     <script src="/login/script.js"></script>
+    <script>
+      const target = document.getElementById('user');
+      const usp = new URLSearchParams(window.location.search);
+      target.value = usp.get('username');
+    </script>
   </body>
 </html>
