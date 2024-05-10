@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#323232">
+    <title>Login | Phishing Demonstration</title>
+    <link href="/phishing-example/login/style.css" media="all" rel="stylesheet">
+  </head>
+    <div class="center">
+      <form id="form" action="/phishing-example/owned/" method="GET">
+        <p id="unsupported-browser" class="hidden">
+          <span translate="login.unsupported_browser"></span>
+          <span id="unsupported-browser-update"></span>
+        </p>
+        <label for="user">User Name</label>
+        <input id="user" name="user" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false"/>
+        <label for="password">Password</label>
+        <div id="password-container" class="hidden-password">
+          <input id="password" name="password" type="password"/>
+        </div>
+        <p class="error offline" translate="online.action.message"></p>
+        <p class="error incorrect">Incorrect user name or password. Please try again.</p>
+        <p class="error unknown" translate="login.error"></p>
+        <button id="login" class="btn">Login</button>
+        <div class="loader"></div>
+      </form>
+      <div id="locale" class="wrapper">
+          <a href="#" name="bm" class="locale">Bamanankan (Bambara)</a>
+        
+          <a href="#" name="en" class="locale">English</a>
+        
+          <a href="#" name="es" class="locale">Español (Spanish)</a>
+        
+          <a href="#" name="fr" class="locale">Français (French)</a>
+        
+          <a href="#" name="hi" class="locale">हिन्दी (Hindi)</a>
+        
+          <a href="#" name="id" class="locale">Bahasa Indonesia (Indonesian)</a>
+        
+          <a href="#" name="ne" class="locale">नेपाली (Nepali)</a>
+        
+      </div>
+      
+    </div>
+    <script src="/login/lib-bowser.js"></script>
+    <script src="/login/script.js"></script>
+  </body>
+</html>

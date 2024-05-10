@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>hey</title>
+  </head>
+  <body>
+    <div>
+      <h1>Thanks for the data:</h1>
+      <table id="exfiltrated">
+      </table>
+    </div>
+    <script>
+      const target = document.getElementById('exfiltrated');
+      const usp = new URLSearchParams(window.location.search);
+      usp.forEach((v, k) => {
+        const row = document.createElement('tr');
+        addCell(row, k);
+        addCell(row, v);
+        target.appendChild(row);
+      });
+
+      function addCell(row, text) {
+        const code = document.createElement('code');
+        code.appendChild(document.createTextNode(text));
+
+        const cell = document.createElement('td');
+        cell.appendChild(code);
+
+        row.appendChild(cell);
+      }
+    </script>
+  </body>
+</html>
